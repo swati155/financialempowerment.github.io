@@ -1,0 +1,327 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #34495e;
+    color: white;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: #2980b9;
+    color: white;
+}
+
+button {
+    padding: 12px 24px;
+    border: none;
+    background: #e74c3c;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #c0392b;
+}
+
+.tools, .testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+.women-financial-goals, .courses {
+    text-align: center;
+    padding: 20px;
+}
+
+.courses {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+.tool, .course-card, .testimonial-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 320px;
+}
+
+.course-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #2c3e50;
+    color: white;
+}
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Center Modal Properly */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;  /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+/* Track Expenses Button Styling */
+#addExpense {
+    padding: 10px 15px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#addExpense:hover {
+    background: #c0392b;
+}
+
+/* Expense List Styling */
+#budgetModal {
+    display: none; /* Page load hone par modal hidden rahega */
+}
+.budget-section {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+}
+
+.tracker-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tracker-header h3 {
+    margin: 0;
+}
+
+.close-expense {
+    font-size: 20px;
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close-expense:hover {
+    color: darkred;
+}
+
+.expense-inputs {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+
+.expense-inputs input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.budget-section button {
+    padding: 10px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.budget-section button:hover {
+    background: #c0392b;
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.expense-name {
+    font-weight: bold;
+}
+
+.expense-amount {
+    color: #e74c3c;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Centering the modal content */
+.modal-content {
+    background: white;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+}
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer; /* Makes the cross button clickable */
+}
+.summary {
+    margin-top: 10px; /* Reduce space above summary */
+    text-align: left;
+}
+
+.summary h3, .summary p {
+    margin: 3px 0; /* Reduce vertical spacing between elements */
+}
+
+#goalList {
+    margin-top: 5px; /* Reduce space above goals list */
+}
+/* Footer Section */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer ul li {
+    display: inline;
+}
+
+footer ul li a {
+    color: #f1c40f;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .tools, .testimonials {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .courses {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

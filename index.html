@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Literacy for Women</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>FinanceLearn</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Master Your Money with Our Simple Guides</h2>
+        <p>Learn how to manage your finances, save, invest, and grow your wealth.</p>
+        <button>Browse Courses</button>
+    </section>
+
+    <section class="women-financial-goals">
+        <h3>Financial Tools Tailored for Women</h3>
+        <p>Whether you're budgeting, saving for your future, or managing investments, we provide tools that help you achieve your financial goals.</p>
+        <div class="tools">
+             <!-- Budgeting Tool Section -->
+            <div class="tool">
+                <h4>Budgeting Tool</h4>
+                <p>Track your income, expenses, and set goals.</p>
+                <button  id="openBudgetTool">Use Tool</button>
+            </div>
+            <div class="tool">
+                <h4>Expense Tracker</h4>
+                <p>Analyze your spending habits and find ways to save.</p>
+                <button id-"trackExpensesBtn">Track Expenses</button>
+            </div>
+            <div class="tool">
+                <h4>Financial Planning</h4>
+                <p>Plan your long-term financial goals like retirement, education, etc.</p>
+                <button>Start Planning</button>
+            </div>
+            <div class="tool">
+                <h4>SIP Calculator</h4>
+                <p>Calculate your SIP (Systematic Investment Plan) investments for wealth creation.</p>
+                <button>Calculate SIP</button>
+            </div>
+            <div class="tool">
+                <h4>EMI Calculator</h4>
+                <p>Calculate monthly EMI payments for loans.</p>
+                <button>Calculate EMI</button>
+            </div>
+            <div class="tool">
+                <h4>Investment Portfolio Tracker</h4>
+                <p>Track your investment performance and make adjustments.</p>
+                <button>Track Investments</button>
+            </div>
+        </div>
+    </section>
+    <!-- Modal for Budgeting Tool -->
+<div id="budgetModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Budgeting Tool</h2>
+
+        <!-- Income Section -->
+        <div class="budget-section">
+            <h3>Track Income</h3>
+            <input type="number" id="incomeInput" placeholder="Enter your income">
+            <button id="addIncome">Add Income</button>
+        </div>
+
+        <!-- Button to Open Expense Tracker -->
+<button id="showExpenseTracker">Track Expense</button>
+
+<!-- Expense Tracker (Initially Hidden) -->
+<div class="budget-section hidden" id="expenseTracker">
+    <div class="tracker-header">
+        <h3>Track Expenses</h3>
+        <span class="close-expense">&times;</span>
+    </div>
+    <div class="expense-inputs">
+        <input type="text" id="expenseName" placeholder="Expense Name">
+        <input type="number" id="expenseAmount" placeholder="Expense Amount">
+    </div>
+    <button id="addExpense">Add Expense</button>
+    <div id="expenseList"></div>
+    <p>Total Expenses: <span id="totalExpenses">₹0</span></p>
+</div>
+
+        <!-- Goal Setting Section -->
+         <!-- ✅ Goal Setting Section (Check if this exists) -->
+         <div class="budget-section">
+            <h3>Set Financial Goals</h3>
+            <input type="text" id="goalInput" placeholder="Enter your financial goal">
+            <button id="addGoal">Set Goal</button>
+            <ul id="goalList"></ul>  <!-- ✅ Yeh ID important hai -->
+        </div>
+
+        <!-- Summary -->
+        <div class="summary">
+            <h3>Summary</h3>
+            <p><strong>Total Income:</strong> ₹<span id="totalIncome">0</span></p>
+            <p><strong>Total Expenses:</strong> ₹<span id="totalExpenses">0</span></p>
+            <p><strong>Remaining Balance:</strong> ₹<span id="balance">0</span></p>
+            <h4>Goals:</h4>
+            <ul id="goalList"></ul>
+        </div>
+    </div>
+</div>
+    <section class="courses">
+        <h3>Featured Courses</h3>
+        <div class="course-card">
+            <img src="https://picsum.photos/300/200?random=1" alt="Course 1">
+            <h4>Budgeting Basics</h4>
+            <p>Learn how to create and stick to a budget.</p>
+            <button>Learn More</button>
+        </div>
+        <div class="course-card">
+            <img src="https://picsum.photos/300/200?random=2" alt="Course 2">
+            <h4>Investing for Beginners</h4>
+            <p>Start your investment journey with easy steps.</p>
+            <button>Learn More</button>
+        </div>
+        <div class="course-card">
+            <img src="https://picsum.photos/300/200?random=3" alt="Course 3">
+            <h4>Saving Tips</h4>
+            <p>Discover strategies to save money effectively.</p>
+            <button>Learn More</button>
+        </div>
+    </section>
+
+    <section class="quiz">
+        <h3>How Financially Literate Are You?</h3>
+        <button>Take the Quiz</button>
+    </section>
+
+    <section class="testimonials">
+        <h3>What Our Learners Say</h3>
+        <div class="testimonial-card">
+            <p>"This course helped me get my finances in order!"</p>
+            <span>- Jane Doe</span>
+        </div>
+        <div class="testimonial-card">
+            <p>"I feel confident about my investment choices now!"</p>
+            <span>- John Smith</span>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 FinanceLearn. All Rights Reserved.</p>
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </footer>
+    <script src="js/"></script>
+    <script src="js/budget.js"></script>
+    <script src="js/trackExpense.js"></script>
+</body>
+</html>
